@@ -69,9 +69,9 @@ export const loginUser = asyncHandler(async (req, res) => {
 
 // @desc      Get user data
 // @route     GET /api/users/me
-// @access    Public
+// @access    Private
 export const getMe = asyncHandler(async (req, res) => {
-  res.json({ message: 'Get user data' });
+  res.json(req.user);
 });
 
 // Generate JWT
